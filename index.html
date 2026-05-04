@@ -382,7 +382,7 @@ function switchScenario(s){
 
 // ══════ API 金鑰設定 ══════
 function applyApiKey(){
-  const key=document.getElementById('api-key-input').value.trim();
+  const key="AIzaSyD9mx6v73yjISb1Hrv0hcvFw_M7vuh0QpE";
   if(!key||!key.startsWith('AIza')){
     alert('請輸入有效的 API 金鑰（以 AIza 開頭）');
     return;
@@ -396,7 +396,7 @@ function applyApiKey(){
   // 儲存到 localStorage 方便下次使用
   try{ localStorage.setItem('gmaps_key',key); }catch(e){}
 }
-
+applyApiKey();
 // 自動帶入上次的 key
 window.addEventListener('load',()=>{
   try{
